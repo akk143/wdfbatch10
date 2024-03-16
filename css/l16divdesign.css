@@ -1,0 +1,72 @@
+.firstdiv{
+    width: 250px;
+    height: 200px;
+    /* background-color:black; */
+    background-color: hsla(230, 30%, 70%, 0.7);
+
+    color: #000;
+    font-size: 20px;
+}
+.seconddiv{
+    width: 1000px;
+    height: 300px;
+    background-color: aqua;
+
+    /* background-image: url(./../img/cover/bg1.webp); */
+    background: url(./../img/cover/bg1.jpeg),linear-gradient(150deg,black,yellow,red);
+
+
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-x; */
+    background-repeat: repeat-y;
+    background-position: center;
+
+
+    color: white;
+    border: 2px solid rgb(255, 13, 0);
+}
+.thirddiv{
+    width: 400px;
+    height: 400px;
+
+    color: antiquewhite;
+
+    /* can solid */
+    /* background-color: darkolivegreen; */
+
+    /* can solid, gradient, image */
+    /* background: linear-gradient(to left,greenyellow,darkblue,red); */
+    /* background: linear-gradient(#131df1,yellow); */
+    background: linear-gradient(
+    -130deg,
+    #0bd1c7,
+    rgb(255, 47, 47),
+    black,
+    yellow);
+
+    border: 2px solid blueviolet;
+}
+.fourthdiv{
+    width: 500px;
+    height: 500px;
+
+    border: solid rgb(189, 5, 5);
+    background-image: url(./../img/cover/bg2.jpeg),linear-gradient(rgba(237, 76, 110, 0),rgba(31, 0, 145, 0.51));
+    background-image: linear-gradient(rgba(237, 76, 110, 0),
+    rgba(31, 0, 145, 0.51)) 
+    url(./../img/cover/bg2.jpeg),;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fifthdiv{
+    width: 200px;
+    height: 100px;
+
+    border:solid tomato;
+    border-radius: 30px;
+    color: blue;
+
+    background: linear-gradient(to left,violet,black,gold);
+
+}

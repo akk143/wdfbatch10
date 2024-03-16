@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statement</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+        // Ternary Operator (?)
+        // c1 > c2 ? true : flase;
+
+        const x = 100;
+        const y = 200;
+
+        console.log(x > y ? "Yes, it is true" : "No, it is false"); //No, it is false
+        console.log(x < y ? "Yes, it is true" : "No, it is false"); //Yes, it is true
+
+        // c1 > c2 ? : true (c1 == c2) ? true : false;
+        console.log(x == y ? "X is equal to Y" : (x < y) ? "X is less than Y" : "X is grater than Y"); //X is less than Y
+
+        const num1 = 200;
+        const num2 = "200";
+ 
+        // check value (==)
+        console.log("== equal to result = " + (num1 == num2 ? "True" : "False")); // == equal to result = True
+
+        // check value & data type(===)
+        console.log("=== equal to result = " + (num1 === num2 ? "True" : "False")); // === equal to result = False
+
+
+        // check value
+        console.log("!= not equal to result = " + (num1 != num2 ? "True" : "False")); // != not equal to result = False
+
+        // check value & data type
+        console.log("!== not equal to result = " + (num1 !== num2 ? "True" : "False")); // !== not equal to result = True
+
+
+        console.log("> greater than result = " + (num1 > num2 ? "True" : "False")); // > greater than result = False
+
+        console.log(">= greater than or result = " + (num1 >= num2 ? "True" : "False")); // > greater than or result = True
+
+
+        console.log("< less than result = " + (num1 < num2 ? "True" : "False")); // > less than result = False
+
+        console.log("<= less than or result = " + (num1 >= num2 ? "True" : "False")); // > less than or result = True
+
+        // if statement 
+
+        // if(condition){
+        //     codes to be excute;
+        // }
+
+        const idx = 30;
+
+        if(idx < 10){
+            console.log("Hello");
+        }
+
+        if(idx < 100){
+            console.log("Hi");
+        }
+
+        if(idx > 100){
+            console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        }
+
+        if(idx > 10){
+            console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        } 
+
+        if(idx == '30'){
+            console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        } 
+
+        if(idx === '30'){
+            console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        } 
+
+        if(idx != '30'){
+            console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        } 
+        
+        if(idx !== '30'){
+            console.log("Correct");
+        }else{
+            console.log("Incorrect");
+        } 
+
+        // else if()
+
+        // if(condition){
+        //     code to be excute;
+        // }else if(condition){
+        //     code to be excute;
+        // }else if(condition){
+        //     code to be excute;
+        // }else{
+        //     code to be excute;
+        // }
+
+        const j = 1000;
+        const k = 1000;
+
+        if (j > k){
+            console.log("Yes, j is greater than k");
+        }else if (j === k){
+            console.log("j is equal to k");
+        }else{
+            console.log("No, j is less than k");
+        }
+
+        // Nested Condition
+
+        const passcode = "hifi123";
+        console.log(passcode.length); //7
+
+        if(passcode.length >= 5){
+            console.log("Strong Password");
+            if(passcode.indexOf(' ') === -1 ){
+                console.log("Valid Password");
+            }else{
+                console.log("Password length is enough ! but should not include space");
+            }
+        }else{
+            console.log("Password must be longer");
+        }
+
+        // switch statement
+
+        // switch(statement){
+        //     case condition:
+        //         code to be excute;
+        //         break;
+        //     case condition:
+        //         code to be excute;
+        //         break;
+        //     case condition:
+        //         code to be excute;
+        //         break;
+        //     default:
+        //         code to be excute;
+        //         break;
+        // }
+
+        const color = "grey";
+
+        switch(color){
+            case "red":
+                console.log("My fav color is not red");
+                break;
+            case "white":
+                console.log("My fav color is not white");
+                break;
+            case "green":
+                console.log("I hate green");
+                break;
+            case "violet":
+                console.log("Correct!!! My fav color is violet");
+                break;
+            default:
+                console.log("Try Again!");
+        }
+
+        let getday = new Date().getDay();
+        console.log(getday); //2
+
+        let today;
+        console.log(today); //undefined
+
+        switch(getday){
+            case 0:
+                today = "Sunday";
+                break;
+            case 1:
+                today = "Monday";
+                break;
+            case 2:
+                today = "Tuesday";
+                break;
+            case 3:
+                today = "Wednesday";
+                break;
+            case 4:
+                today = "Thursday";
+                break;
+            case 5:
+                today = "Friday";
+                break;
+            // case 6:
+            //     today = "Saturday";
+            //     break;
+            default:
+                today = "Saturday";
+        }
+
+        console.log(today);
+
+        let p = 10;
+        let q = 50;
+        console.log(p); //10
+        console.log(q); //50
+
+        // p = q;
+        // console.log(p);
+
+        // p = p + q;
+        // console.log(p); //60
+
+        // p += q;
+        // console.log(p); //60
+
+        // p -= q;
+        // console.log(p); //-40
+
+        // q -= p;
+        // console.log(p); //40
+
+        // q *= p;
+        // console.log(q); //500
+
+        // q /= p;
+        // console.log(q); //5
+
+        q %= p;
+        console.log(q); //0
+
+        const username = prompt("Enter your username");
+        const password = prompt("Enter your password");
+
+        console.log(username,password);
+        console.log(typeof username,typeof password);
+
+        // if(username === "aung aung" && password === "12345"){
+        //     console.log("Welcome, Aung Aung!");
+        // }else{
+        //     console.log("Try Again!");
+        // }
+
+        if(username === "aungaung" || password === "12345"){
+            console.log("Welcome, Aung Aung!");
+        }else{
+            console.log("Try Again!");
+        }
+
+    </script>
+
+</body>
+</html>
+
+<!-- Comparison Operators (9)
+
+    ==    equal to 
+    ===   equal to 
+    !=    not equal to 
+    !==   not equal to 
+    >     grater than
+    >     grater than or equal
+    <     less than
+    <=    less than or equal
+    ?     statement(ternary operator) -->
+
+<!-- Assigement Operators (6)
+
+    =
+    +=
+    -=
+    *=
+    /=
+    %= -->
+<!-- 
+Logical Operators (3)
+
+    &&    and 
+    ||    or
+    !     not -->

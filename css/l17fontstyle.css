@@ -1,0 +1,108 @@
+/* Font Integrate
+(i)  Local Machine Integration
+(ii) Global Integration or Project Folder Integration */
+
+
+ /* (i)  Local Machine Integration*/
+ /* @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap'); */
+ /* @import url('https://fonts.googleapis.com/css2?family=Stick&display=swap'); */
+ /* @import url(./l17addfile.css); */
+
+
+/* Universal Selector */
+*{
+   cursor: pointer;
+}
+body{
+   font-family:monospace;
+   color: red;
+}
+
+@font-face {
+   font-family: abc;
+   src: url(./../font/stick/stickregular.ttf);
+}
+@font-face {
+   font-family: egh;
+   src: local('akayatelivigala-regular'),url(./../font/Akaya_Telivigala/AkayaTelivigala-Regular.ttf) format('woff');
+}
+.p1{
+   font-family: abc,sans-serif;
+}
+.p2{
+   font-family: 'Times New Roman';  /*String must be double code or single code  */
+   color: blue !important;
+   font-size: 20px;
+}
+.p4{
+   font-family: egh,Arial;
+} 
+.clickme{
+   text-decoration: none; 
+   color: red;
+   transition: all 3s;
+}
+
+/*pseudo class (:)*/
+.clickme:hover{
+   text-decoration: underline;
+   font-size: 30px;
+}
+.clickme:visited{
+   color:green
+}
+
+.menutext{
+   font-family: fantasy;
+   background-color: blueviolet;
+   text-decoration: none;
+   color: #fff;
+
+   /* padding: 10px; */
+   /*      top & bottom left & right */
+   /* padding:10px 20px; */
+          /* top right bottom left */
+   /* padding: 10px 20px 30px 40px; */
+
+   padding-top: 10px;
+   padding-right: 10px;
+   padding-bottom: 10px;
+   padding-left: 10px;
+
+   border-radius: 20px;
+
+   transition: all 3s;
+   transition: background-color 2s;
+   transition: background-color 5s,color 3s;
+}
+.menutext:hover{
+   background-color: greenyellow;
+   color: #000;
+}
+.imgdesign{
+   width: 80px;
+   height: 80px;
+   cursor: pointer;
+
+   transition: all 2s;
+}
+.imgdesign:hover{
+   width: 100px;
+   height: 100px;
+}
+
+
+
+
+
+
+
+/*(ii) Global Integration or Project Folder Integration */
+/* body{
+   font-family: 'Stick', sans-serif;
+} */
+   /* font bold = 100 to 900 */
+/* .p3{
+   font-family: Akaya Telivigala,sans-serif;
+} */
+ 

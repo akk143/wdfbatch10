@@ -1,0 +1,62 @@
+=> git 
+
+=> one time
+after install
+git 
+git --version    (git version 2.39.3 (Apple Git-146))
+
+git config --global user.name "Ye Thu Aung"
+git config user.name
+
+git config --global user.email "pyoneoosan2021dcc@gamil.com"
+git config user.email
+
+=> SSH (Secure Shell)
+ ssh-keygen (need to wait 20 minutes for another key)
+
+
+=> github
+(1 project 1 time)
+git init
+git remote add origin "git@github.com:akk143/pttsofrware.git"
+
+(as to you)
+git status (repeat)
+git add - A   (index.html)         (git add *)
+git status
+git commit -m "my first project"
+git status
+git push -u origin main
+
+=>Update
+git status
+git add *
+git commit -m "title"
+git status
+
+=> Pull Request
+git init
+git remote add origin "git@github.com:akk143/pttproject.git"
+git pull origin main
+
+-------------------------------------------
+
+How to solve this problem of "! [rejected] main -> main (fetch first)"
+First Do this ...
+
+git fetch origin main
+git merge  main
+
+Then, do this ...
+
+git fetch origin main:tmp
+git rebase tmp
+git push origin HEAD:main
+git branch -D tmp
+
+Now everything works well.
+
+
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        //Local Storage
+
+        // => Create
+        // localStorage.setItem('name','aung aung');
+        // localStorage.setItem('age',27);
+        // localStorage.setItem('city','Yangon');
+
+        // // => Update
+        // //Method1
+        // localStorage.setItem('name','kyaw kyaw');
+
+        // //Method2
+        // localStorage.city = 'Mandalay';
+
+        // // =>Read
+        // const getname = localStorage.name;
+        // const getage = localStorage.age;
+        // const getcity= localStorage.city;
+
+        // console.log(getname,getage,getcity);  //kyaw kyaw 27 Mandalay
+        // console.log(typeof getname,typeof getage,typeof getcity); //string string string
+
+        // const name = localStorage.getItem('name');
+        // const age = localStorage.getItem('age');
+        // const city= localStorage.getItem('city');
+
+        // console.log(name,age,city); //kyaw kyaw 27 Mandalay
+        // console.log(typeof name,typeof age,typeof city);  //string string string
+
+
+        // => Delete
+
+        //Method 1 (Single Delete)
+        // localStorage.removeItem('name');
+        // localStorage.removeItem('age');
+        // localStorage.removeItem('city');
+
+        //Method 2 (All Delete)
+        localStorage.clear();
+
+        //---------------------------------------------------------
+
+        //Session Storage
+
+         // => Create
+        sessionStorage.setItem('name','aung aung');
+        sessionStorage.setItem('age',27);
+        sessionStorage.setItem('city','Yangon');
+
+        // // => Update
+        // //Method1
+        // sessionStorage.setItem('name','kyaw kyaw');
+
+        // //Method2
+        // sessionStorage.city = 'Mandalay';
+
+        // // =>Read
+        // const getname = sessionStorage.name;
+        // const getage = sessionStorage.age;
+        // const getcity= sessionStorage.city;
+
+        // console.log(getname,getage,getcity);  //kyaw kyaw 27 Mandalay
+        // console.log(typeof getname,typeof getage,typeof getcity); //string string string
+
+        // const name = sessionStorage.getItem('name');
+        // const age = sessionStorage.getItem('age');
+        // const city= sessionStorage.getItem('city');
+
+        // console.log(name,age,city); //kyaw kyaw 27 Mandalay
+        // console.log(typeof name,typeof age,typeof city);  //string string string
+
+
+        // => Delete
+
+        //Method 1 (Single Delete)
+        // sessionStorage.removeItem('name');
+        // sessionStorage.removeItem('age');
+        // sessionStorage.removeItem('city');
+
+        //Method 2 (All Delete)
+        sessionStorage.clear();
+
+
+
+    </script>
+</body>
+</html>
+
+<!-- Database
+
+(i)temporary storage
+(ii)permenent storage (mysql/mogodb/firebase)
+
+Cookies                  Local Storage                          Session Storage
+(4kb)                    5mb-10mb-20mb(browser depent)          5mb
+All Windows              All Windows                            Private to tag
+when user delete         when user delete                       on tag close
+browser/sever            browser                                browser
+
+-->

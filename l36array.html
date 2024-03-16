@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        let girls = new Array('su su','lu lu','hla hla',);
+
+        console.log(girls);
+        console.table(girls);
+        console.log(girls.length);
+
+        const boys = ['mg mg','zaw zaw','kyaw kyaw','naw naw',300];
+
+        console.info(boys);
+        console.table(boys);
+        console.info(boys.length);
+        console.info(typeof boys);
+
+        console.info(boys[0]);
+        console.info(boys[3]);
+        console.info(typeof boys[3]);
+        console.info(boys[4]);
+        console.info(typeof boys[4]);
+        console.info(boys[boys.length-3]);
+
+        console.info(boys[boys.length-1]); //200
+
+        let myarrs = ['hello',293,true,null,undefined,new Date(),['red','green'],{firstname:'zaw zaw',city:'Mandalay'}];
+
+        console.log(myarrs);
+        console.log(myarrs.length);
+        console.log(myarrs[0]);
+        console.log(myarrs[5]);
+        console.log(myarrs[5-1]);
+        console.log(myarrs[6][1]);
+        console.log(myarrs[7]);
+        console.log(myarrs[7].firstname);
+        console.log(myarrs[7].city);
+
+        let colors = ['red','green','blue'];
+            colors = ['rgba','cymk'];
+        console.info(colors);
+        console.info(colors.length);
+
+        let paints = [];
+
+        paints[0] ='white';
+        paints[1] ='green';
+        paints[3] ='blue';
+        paints[2] ='gray';
+        paints[1] ='pink';
+        paints[5] = 'skyblue';
+
+        console.log(paints);
+        console.log(paints.length);
+        console.log(paints[4]); //undified
+
+        let animals = ['cat','dog'];
+            animals[2] = 'owl';
+            animals[5] = 'fish';
+            animals[0] = 'tiger';
+            animals[3] = 'cow';
+
+        console.log(animals);
+        console.log(animals.length);
+
+        // Nested Array
+
+        const nestarrs = [
+            ['red','green','blue'],
+            ['cymk','rgba','hsla'],
+            ['canon','epson',['laser','ink']]
+        ];
+
+        console.log(nestarrs);
+        console.log(nestarrs.length);
+        console.log(nestarrs[0][2]); //blue
+        console.log(nestarrs[2][2][1]); //ink
+
+    </script>
+    
+</body>
+</html>

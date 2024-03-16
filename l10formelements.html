@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Form Elements</title>
+    </head>
+
+    <body>
+
+        <h3>Form Elements</h3>
+
+        <fieldset>
+
+            <legend>This is a sample form</legend>
+
+        <form action="" method="" enctype="multipart/form-data">
+
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstname" id="firstname" class="" autocomplete="off" minlength="3" maxlength="6" autofocus  placeholder="Enter your firstname" required />
+
+            <br/><br/>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname" class="" autocomplete="off" class="" placeholder="Enter your lastname" required />
+
+            <br/><br/>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" class="" min="18" max="100" placeholder="Enter your age" required />
+
+
+            <br/><br/>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" class="" placeholder="Enter your password" />
+
+            <br/><br/>
+
+            <label>Genders:</label>
+            <input type="radio" name="gender" id="genderm" class="" value="1" checked /> <label for="genderm">Male</label>
+            <input type="radio" name="gender" id="genderf" class="" value="0" /> <label for="genderf">Female</label>
+            <input type="radio" name="gender" id="gendero" class="" value="2" /> <label for="gendero">Other</label>
+
+            <br/><br/>
+
+            <label>Fruits:</label>
+            <input type="radio" name="fruit" id="fruitap" class="" value="1" /> <label for="fruitap">Apple</label>
+            <input type="radio" name="fruit" id="fruitog" class="" value="3" /> <label for="fruitog">Orange</label>
+            <input type="radio" name="fruit" id="fruitpp" class="" value="2" /> <label for="fruitpp">Pineapple</label>
+
+            <br/><br/>
+
+            <label>Choose your favourite colors:</label>
+            <input type="checkbox" name="color" id="favrd" class="" value="1" /> <label for="favrd">Red</label>
+            <input type="checkbox" name="color" id="favbl" class="" value="4" /> <label for="favbl">Blue</label>
+            <input type="checkbox" name="color" id="favwh" class="" value="3" /> <label for="favwh">White</label>
+            <input type="checkbox" name="color" id="favyl" class="" value="2" /> <label for="favyl">Yellow</label>
+
+            <br/><br/>
+
+            <label for="citizen">Citizen:</label>
+
+            <select name="citizen" id="citizen" class="">
+                <option selected disabled>Choose Country</option>
+                <option value="0">Myanmar</option>
+                <option value="2">Thailand</option>
+                <option value="4">Singapore</option>
+                <option value="3">Laos</option>
+            </select>
+
+            <br/><br/>
+
+            <label for="role">Roles:</label>
+
+            <select name="role" id="role" class="">
+                <option value="1">Manager</option>
+                <option value="2">Editor</option>
+                <option value="2">Supervisor</option>
+                <option value="3">Sales</option>
+            </select>
+
+            <br/><br/>
+
+            <label for="DOB">DOB:</label>
+            <input type="date" name="dob" id="dob" class="" />
+
+            <br/><br/>
+
+            <label for="bookingtime">Booking Time:</label>
+            <input type="time" name="bookingtime" id="bookingtime class" class="" />
+
+            <br/><br/>
+
+            <label for="apt">Appoitment:</label>
+            <input type="datetime-local" name="apt" id="apt" class="" />
+
+            <br/><br/>
+
+            <label for="volume">Volume:</label>
+            <input type="range" name="volume" id="volume" class="" min="0" max="100" value="0" step="10"/>
+
+            <br/><br/>
+
+            <label for="nrc">NRC:</label>
+            <input type="file" name="nrc" id="nrc" class="" accept="image/*" capture="user" multiple />
+
+            <br/><br/>
+
+            <label for="vdo">Video:</label>
+            <input type="file" name="vdo" id="vdo" class="" accept="video/*" capture="envoriment" multiple />
+
+            <br/><br/>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" class="" placeholder="Enter your email" />
+
+            <br/><br/>
+
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id="bio" rows="3" spellcheck="false" placeholder="Enter your bio"></textarea>
+
+            <br/><br/>
+
+            <input type="text" name="test" id="test" class="" hidden /> <!-- Attribute -->
+            <input type="hidden" name="efg" id="efg" class="" /> <!-- value -->
+
+            <br/><br/>
+
+            <input type="reset" name="cancel" id="cancel" class="" value="Cancel" />
+            <input type="button" name="login" id="login" class="" value="Login" />
+            <input type="submit" name="submit" id="submit" class="" value="Signup" />
+
+
+            <button type="reset" name="register" id="register" class="" value="register">Register</button>
+            <button type="button" name="signups" id="signups" class="" value="Signup">Signup</button>
+            <button type="submit" name="signup" id="logins" class="" value="Login">Login</button>
+
+        </form>
+
+    </fieldset>
+
+    </body>
+</html>
+
+
+<!-- 
+name = PHP (name = label for(id))
+id = JS
+class = CSS  
+-->
+
+<!-- 
+Self closing tag
+Stand Alone Attribute
+    value doesn't need         
+    can't write
+    read only
+      
+    selected
+    checked(radio & check-box only)
+    read-only
+     autofocus
+    disabled(can use oth)
+    hidden
+    required
+-->
+
+<!-- 
+     array = [] multiple
+    capture = only in android phone -->
+
+<!-- 
+    fieldset
+    legend 
+-->

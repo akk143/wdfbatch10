@@ -1,0 +1,35 @@
+/*Single selector*/
+h1{
+    color: tomato;
+}
+
+ /*Group selector(,)*/
+h3,h4,h5{
+    color: greenyellow;
+    font-size: 20px;
+}
+
+/* ID selector 
+Class selector */
+
+#abc{
+    color: blueviolet;
+}
+
+#world,#pt,i{
+    color:darkorange;
+}
+
+.ph,u{
+    color: rgb(4, 77, 151);
+}
+
+.ph2{
+    font-size: 30px;
+    color: violet;
+
+}
+
+.fontlg,u{
+    font-size: 25px;
+}

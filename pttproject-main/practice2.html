@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name</title>
+</head>
+<body>
+
+   <label>Name</label>
+    <input type="text" id="name"/>
+    <button id="submit">click me</button>
+    <label>Output</label>
+    <h3 id="display"></h3>
+
+
+    <script type="text/javascript">
+       let username;
+       let submit = document.getElementById("submit");
+        submit.onclick = function(){
+        username = document.getElementById("name").value;
+
+       document.getElementById("display").innerText = `Your name is ${username}`;
+
+       }
+
+    </script>
+
+
+</body>
+</html>

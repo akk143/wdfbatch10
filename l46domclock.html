@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Dom Clock</title>  <!-- Document Object Model  -->
+
+    <style type="text/css">
+
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h3 id="display">00:00:00 PM Sundaay</h3>
+
+    <script type="text/javascript">
+
+        getdisplay = document.getElementById('display');
+        const days = ['Sunday','Monday','Tuesday','Wednesday','Friday','Saturday'];
+
+        function setclock(){
+        let getdate = new Date();
+        // console.log(getdate);
+
+        let gethours = getdate.getHours();
+        // console.log(gethours);
+
+        let getminutes= getdate.getMinutes();
+        // console.log(getminutes);
+
+        let getseconds = getdate.getSeconds();
+        // console.log(getseconds);
+
+        let getday = getdate.getDay();
+        // console.log(getdays);
+
+        let getampm;
+
+        switch(gethours > 12){
+            case true:
+                getampm = "PM"
+                gethours = gethours - 12;
+                break;
+            case false:
+                getampm = "AM"
+                break;
+        }
+
+        let setclock = `${gethours} : ${getminutes} : ${getseconds} ${getampm} ${days[getday]}`;
+        console.log(setclock);
+
+        display.innerHTML = setclock;
+        }
+
+        // setInterval = (callbackfunction,timer,ms);
+        // 1s =1000ms;
+        
+        setclock();
+        setInterval(setclock,1000);
+
+    </script>
+
+</body>
+</html>

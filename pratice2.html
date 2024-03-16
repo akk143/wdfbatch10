@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Numbers</title>
+
+    <style type="text/css">
+
+        body{
+            background-color: #c3c3c3;
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .numguess,.btn{
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        .gameform span{
+            display: block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Guess the number</h1>
+        <p>Guess the number between<span class="minnum"> 00 </span> to <span class="maxnum"> 00 </span></p>
+
+        <form id="gameform" class="gameform" action="" method="">
+
+            <div class="control-form">
+
+                <input type="number" id="numguess" class="numguess" placeholder="Enter your guess number..." autofocus />
+                <input type="submit" id="btn" class="btn"/>
+
+            </div>
+
+        <span class="msg1"></span>
+        <span class="msg2"></span>
+
+        </form>
+
+    </div>
+    <script type="text/javascript">
+
+const minnum = document.querySelector('.minnum'),
+      maxnum = document.querySelector('.maxnum'),
+      guessnum = document.querySelector('#numguess'),
+      getbtn = document.querySelector('#btn'),
+      getmsg1 = document.querySelector('.msg1'),
+      getmsg2 = document.querySelector('.msg2'),
+      getgform = document.getElementById('gameform');
+
+const min = 1,
+      max = 25,
+      winnum = randomnum(min,max);;
+
+let gamechance = 5;
+
+minnum.textContent = min;
+maxnum.innerHTML = max;
+
+getbtn.addEventListener('click',function(e){
+
+    let guess = parseInt(guessnum.value);
+
+    if(guess < min || guess > max || isNaN(guess)){
+        gmsg2(`Please enter a number between ${min} to ${max}`,"red");
+
+    }
+
+    if(guess === winnum){
+        
+        gover(true,`${winnum} is correct!! You Won`,"blue");
+
+    }else{
+        gamechance -=1;
+
+        if(gamechance === 0){
+
+        gover(false,`Game Over!!! The correct number is ${winnum}`,"red");
+
+        }else{
+
+        gmsg1(`${guess} is incorrect! ${gamechance} chace left`,"blue");
+
+            guessnum.value = "";
+            guessnum.focus();
+        }
+    }
+
+    e.preventDefault();
+
+});
+
+function gmsg1(msg,color){
+    getmsg1.textContent = msg;
+    getmsg1.style.color = color;
+}
+
+function gmsg2(msg,color){
+    getmsg2.textContent = msg;
+    getmsg2.style.color = color;
+
+setTimeout(function(){
+    getmsg2.textContent = ""
+},3000);
+}
+
+
+function gover(won,msg){
+    let color;
+
+    won === true? color = "green" : color = 'red';
+
+    guessnum.disabled = true;
+    guessnum.style.borderColor = 'color';
+    gmsg1(msg,color);
+    getbtn.value = 'Play Again';
+}
+
+getbtn.classList.add('playagain');
+
+gameform.addEventListener('mousedown',function(e){
+    if(e.target.className === 'btn playagain'){
+
+        window.location.reload();
+    }
+});
+
+function randomnum(min,max){
+let getrdm = Math.floor(Math.random()*(max-min)+min);
+return getrdm;
+}
+
+
+    </script>
+</body>
+</html>

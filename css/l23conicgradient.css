@@ -1,0 +1,131 @@
+.circle1, .circle2, .circle3, .circle4, .circle5, .circle6{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+}
+
+.circle1{
+    background: conic-gradient(red,blue,yellow,black);
+}
+.circle2{
+    background: conic-gradient(#4251c6,#670432,#49eb34,#3e3b82);
+}.circle3{
+    background: conic-gradient(rgba(245, 94, 57, 0.8),rgba(168, 220, 14, 0.78),rgba(8, 213, 117, 0.79),rgba(2, 44, 22, 0.6));
+}.circle4{
+    background: conic-gradient(
+        hsla(308, 22%, 74%, 0.55),
+        hsla(208, 45%, 27%, 0.5),
+        hsla(38, 62%, 64%, 0.9),
+        hsla(258, 62%, 14%, 0.9));
+}
+.circle5{
+    background: conic-gradient(
+    red 40%,
+    green 0% 50%,
+    yellow 0% 80%,
+    blue 0%);
+}
+.circle6{
+    background: linear-gradient(
+     60deg,
+    red 30%,
+    green 0% 50%,
+    yellow 0% 70%,
+    blue 0%);
+}
+.box1{
+    width: 600px;
+    height: 300px;
+    background-color: blue;
+    color: #fff;
+
+    display: flex;   /*display for child & doesn't work for self */
+    /* horizontal-center */
+    justify-content: center;
+    /* vertical-center */
+    align-items: center; 
+
+    /* display: grid; display grid works in one items */
+    /* place-items: center; */
+
+    position: relative;
+
+
+}
+.box1 .div1{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(218, 218, 29);
+    color: blue;
+
+    border-radius: 50%;
+
+    position: absolute;
+    /* left: 0;*/  /* (start with left & top) */
+    /* top: 0; */
+
+    z-index: 3;
+}
+.box1 .div2{
+    width: 320px;
+    height: 320px;
+    background-color: aqua;
+    color: blue;
+
+    position: absolute;
+    z-index: 2; /*(z-index needs position-absolute)*/
+
+    border-radius: 50%;
+    /* background: linear-gradient(black,green); */
+    background: conic-gradient(
+        red,
+        blue 20%,
+        red 0%,
+        black 50%,
+        red 0%,
+        skyblue
+        );
+}
+.pointer-container{
+    width: 20px;
+    height: 200px;
+    /* background-color: blueviolet; */
+
+    position: absolute;
+    top: -50px;
+    z-index: 5;
+
+    animation-name: ani1;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+
+    transform-origin: bottom;
+
+}
+.pointer{
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+
+    display: block;
+}
+@keyframes ani1 {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        /* transform: rotate(180deg); */
+    }
+    /* 0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        transform: rotate(-180deg);
+    } */
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Time</title>
+</head>
+<body>
+
+    <div class="footer">
+        <small><span id="newyear">2023</span> @Copyright  A quick brown fox jumps over the lazy dog. All Right Reversed.</small>
+    </div>
+    <script type="text/javascript">
+
+        let date = new Date(); //class / object
+        console.log(date); //Mon Jan 01 2024 20:49:31 GMT+0630 (Myanmar Time)
+        console.log(new Date()); //Mon Jan 01 2024 20:49:31 GMT+0630 (Myanmar Time)
+
+        // let getdate = new Date().getDate(); //class method
+        let getdate = date.getDate();
+        console.log(getdate); //1
+
+        let hour = date.getHours();
+        console.log(hour); //20
+
+        let minute = date.getMinutes();
+        console.log(minute); //2
+
+        let second = date.getSeconds();
+        console.log(second); //37
+
+        // 1s = 1000ms 
+        // 1st jan 1970 > up-to-now
+        
+        let time = date.getTime();
+        console.log(time); //1704120049108
+
+        let now = Date.now();
+        console.log(now); //1704120122624
+
+        //array[]
+        // index number = 0 (0 to 11)
+            // 0    1     2     3     4     5      6      7     8     9    10    11
+        // ['jan','feb','mar','apr','may','june','july','aug','sep','oct','nov','dec'];
+
+        let month = date.getMonth();
+        console.log(month); // 0
+
+        //   0     1     2     3      4     5     6
+        //['sun','mon','tue','wed','thur','fri','sat']
+        let day = date.getDay();
+        console.log(day); // 2
+
+        let year = date.getFullYear();
+        console.log(year); // 2024
+
+        //Coordinated Universal Time (-12 +6:30 +12)
+        let utcyear = date.getUTCFullYear();
+        console.log(utcyear); // 2024
+
+        // document.getElementById("newyear").innerText = utcyear;
+        // document.getElementById("newyear").innerText = utcyear;
+        document.getElementById("newyear").innerHTML = utcyear;
+
+        let birthday = new Date('2 3 2012'); //Fri Feb 03 2012 00:00:00 GMT+0630 (Myanmar Time
+            birthday = new Date('5-5-2013'); //Sun May 04 2013 00:00:00 GMT+0630 (Myanmar Time)
+            birthday = new Date('6/1/2010'); //Tue Jun 01 2010 00:00:00 GMT+0630 (Myanmar Time)
+            birthday = new Date('Sep 1 1993 8:12:05'); //Wed Sep 01 1993 08:12:05 GMT+0630 (Myanmar Time)
+        console.log(birthday);
+
+            birthday.setDate(19); //FSun Sep 19 1993 08:12:05 GMT+0630 (Myanmar Time)
+            birthday.setMonth(5); //Fri Apr 19 2030 08:12:05 GMT+0630 (Myanmar Time)
+            birthday.setFullYear(2030); //Fri Apr 19 2030 08:12:05 GMT+0630 (Myanmar Time)
+        console.log(birthday);
+
+            birthday.setHours(12);
+            birthday.setMinutes(3);
+            birthday.setSeconds(53);
+        console.log(birthday);
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style type="text/css">
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-box{
+            width: 350px;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 2px 3px 4px red;
+            background-color: aqua;
+        }
+        h3{
+            text-align: center;
+        }
+        .form-control{
+            width: 100%;
+            padding: 5px;
+        }
+        label{
+            display: block;
+            margin: 3px;
+        }
+        input[type="text"]{
+            width: 100%;    
+            font-size: 13px;  
+            padding: 5px;
+            border: none;
+            border-radius: 15px;
+        }
+        .btn{
+            width: 100%;
+            font-size: 17px;
+            margin-top: 10px;
+            padding: 4px;
+
+            background-color: blueviolet;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-box">
+
+        <h3>Name = <span id="replacename">....</span></h3>
+
+        <form action="" method="">
+
+            <div class="form-control">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" autocomplete="off" autofocus />
+            </div>
+
+            <div class="form-control">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" autocomplete="off" />
+            </div>
+
+            <button type="button" class="btn" onclick="getData()">ClickMe</button>
+
+        </form>
+
+    </div>
+
+    <script type="text/javascript">
+        function getData(){
+
+            const getfirstname = document.getElementById("firstname").value;
+            const getlastname = document.getElementById("lastname").value;
+            const getreplacename = document.getElementById("replacename");
+
+            getreplacename.innerHTML = `${getfirstname} ${getlastname}`;
+
+            document.getElementById("firstname").value ='';
+            document.getElementById("lastname").value ='';
+            document.getElementById("firstname").focus();
+
+        }
+
+        function fun1(a,b,c){
+            console.log(`number a value is = ${a}, number a value is = ${b}, number a value is = ${c}`)
+        }
+        fun1(1,2,4);
+
+    </script>
+
+</body>
+</html>

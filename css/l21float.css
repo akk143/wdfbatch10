@@ -1,0 +1,45 @@
+/* Variable */
+/* Custom Variable */
+
+:root{
+    --rd: red;
+    --yel: #f5ef42;
+    --gr: rgba(81, 232, 96,0.6);
+    --be: silver;
+    --ln: blue;
+    --wid: 100px;
+
+}
+.div1{
+    /* --wid: 100px; */
+    width: var(--wid);
+    height: 100px;
+    background-color: var(--rd);
+    float: left;
+}
+.div3{
+    width: 200px;
+    height: 200px;
+    background-color: var(--yel);
+    float: left;
+}
+.div2{
+    width: 150px;
+    height: 150px;
+    background-color: var(--gr);
+    float: left;
+
+}
+.div5{
+    width: 300px;
+    height: 300px;
+    background-color: var(--be);
+    float: left;
+
+}.div4{
+    width: 250px;
+    height: 250px;
+    background-color: var(--ln);
+    float: left;
+
+}

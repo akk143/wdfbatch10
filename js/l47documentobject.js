@@ -669,19 +669,20 @@ document.querySelector('form').addEventListener('submit',function(e){
     alltasks.push(getnewtask);
     localStorage.setItem('mytasks',JSON.stringify(alltasks));
 
+    // console.log(localStorage.getItem('mytasks'));
+    // console.log(typeof localStorage.getItem('mytasks'));
+
+    console.log(JSON.parse(localStorage.getItem('mytasks')));
+    console.log(typeof JSON.parse(localStorage.getItem('mytasks')));
+
+    const getmytasks = JSON.parse(localStorage.getItem('mytasks'));
+
+    getmytasks.forEach(function(getmytask){
+        console.log(getmytask);
+    });
+
 });
 
-// console.log(localStorage.getItem('mytasks'));
-// console.log(typeof localStorage.getItem('mytasks'));
-
-console.log(JSON.parse(localStorage.getItem('mytasks')));
-console.log(typeof JSON.parse(localStorage.getItem('mytasks')));
-
-const getmytasks = JSON.parse(localStorage.getItem('mytasks'));
-
-getmytasks.forEach(function(getmytask){
-    console.log(getmytask);
-});
 
 
 
